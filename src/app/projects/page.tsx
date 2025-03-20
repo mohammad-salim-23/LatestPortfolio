@@ -18,7 +18,7 @@ const Projects = () => {
     };
     fetchProjects();
   }, []);
-
+  console.log(projects);
   return (
     <div className="p-5 z-1">
       <h2 className="text-2xl font-bold text-center mb-6">My Projects</h2>

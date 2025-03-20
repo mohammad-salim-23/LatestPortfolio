@@ -24,6 +24,7 @@ const skills = [
   { name: "OOP", icon: <FaJava className="text-indigo-500 text-3xl" />, level: "80%" },
 ];
 
+const text = "DEVELOPER, PROBLEM SOLVER AND TECHNICAL ENTHUSIAST.";
 const HomePage = () => {
   interface Project {
     _id: string;
@@ -35,6 +36,10 @@ const HomePage = () => {
  const router = useRouter();
   const [projects, setProjects] = useState<Project[]>([]);
   const [currentSkill, setCurrentSkill] = useState(0);
+
+  const [visibleText, setVisibleText] = useState("");
+  const [deleting, setDeleting] = useState(false);
+  const [index, setIndex] = useState(0);
   useEffect(() => {
     const fetchProjects = async () => {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/projects`, {
@@ -52,6 +57,28 @@ const HomePage = () => {
   }, 1500);
   return ()=> clearInterval(interval);
  })
+ useEffect(() => {
+  const interval = setInterval(() => {
+    if (!deleting) {
+      if (index < text.length) {
+        setVisibleText((prev) => prev + text[index]);
+        setIndex((prev) => prev + 1);
+      } else {
+        setTimeout(() => setDeleting(true), 1000);
+      }
+    } 
+    // else {
+    //   if (index > 0) {
+    //     setVisibleText((prev) => prev.slice(0, -1));
+    //     setIndex((prev) => prev - 1);
+    //   } else {
+    //     setDeleting(false);
+    //   }
+    // }
+  }, 100);
+  return () => clearInterval(interval); 
+}, [index, deleting]);
+
   return (
     <div className="container mx-auto max-w-5xl px-6 text-center flex flex-col items-center">
       {/* Hero Section */}
@@ -61,7 +88,7 @@ const HomePage = () => {
         transition={{ duration: 0.8 }}
         className="text-5xl font-bold mt-16"
       >
-        DEVELOPER, PROBLEM SOLVER <br /> AND TECHNICAL ENTHUSIAST.
+       {visibleText}
       </motion.h1>
 
       {/* Resume Download */}
