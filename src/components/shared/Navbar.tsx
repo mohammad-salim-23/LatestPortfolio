@@ -16,7 +16,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="w-[90%] mx-auto flex items-center justify-between bg-white border-b py-4">
+    <div className="w-[90%] mx-auto flex items-center justify-between bg-white border-b py-4 z-50">
       {/* Left Side: Logo & Mobile Menu */}
       <div className="flex items-center">
         {/* Hamburger Button */}
@@ -54,16 +54,16 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
       {/* Desktop Navigation Links */}
       <div className="hidden lg:flex">
         <ul className="flex space-x-6 text-gray-800">
-          <li className="hover:text-gray-600">
+          <li className="hover:text-teal-600">
             <Link href="/">Home</Link>
           </li>
-          <li className="hover:text-gray-600">
+          <li className="hover:text-teal-600">
             <Link href="/projects">Projects</Link>
           </li>
-          <li className="hover:text-gray-600">
-            <Link href="/blog">Blog</Link>
+          <li className="hover:text-teal-600">
+            <Link href="/blogs">Blog</Link>
           </li>
-          <li className="hover:text-gray-600">
+          <li className="hover:text-teal-600">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
@@ -71,17 +71,17 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <ul className="absolute top-16 left-4 bg-white shadow-md rounded-md w-52 p-2 lg:hidden">
-          <li className="py-2 px-4 hover:bg-gray-100">
+        <ul className="absolute top-16 left-4 bg-white shadow-md rounded-md w-52 p-2 lg:hidden z-10">
+          <li className="py-2 px-4 hover:bg-teal-100">
             <Link href="/">Home</Link>
           </li>
-          <li className="py-2 px-4 hover:bg-gray-100">
+          <li className="py-2 px-4 hover:bg-teal-100">
             <Link href="/projects">Projects</Link>
           </li>
-          <li className="py-2 px-4 hover:bg-gray-100">
-            <Link href="/blog">Blog</Link>
+          <li className="py-2 px-4 hover:bg-teal-100">
+            <Link href="/blogs">Blog</Link>
           </li>
-          <li className="py-2 px-4 hover:bg-gray-100">
+          <li className="py-2 px-4 hover:bg-teal-100">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>

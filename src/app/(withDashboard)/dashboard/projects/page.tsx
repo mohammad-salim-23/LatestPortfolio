@@ -18,7 +18,7 @@ const ProjectPage = () => {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const res = await fetch(`${process.env.BACKEND_URL}/projects`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/projects`, {
         cache: "no-store",
       });
       const data = await res.json();
@@ -34,8 +34,8 @@ const ProjectPage = () => {
   const handleSubmit = async () => {
     const method = editId ? "PUT" : "POST";
     const url = editId
-      ? `${process.env.BACKEND_URL}/projects/${editId}`
-      : `${process.env.BACKEND_URL}/projects`;
+      ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/projects/${editId}`
+      : `${process.env.NEXT_PUBLIC_BACKEND_URL}/projects`;
     const res = await fetch(url, {
       method,
       headers: { "Content-Type": "application/json" },
@@ -56,7 +56,7 @@ const ProjectPage = () => {
   };
 
   const handleDelete = async (id: string) => {
-    const res = await fetch(`${process.env.BACKEND_URL}/projects/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/projects/${id}`, {
       method: "DELETE",
     });
     if (res.ok) {

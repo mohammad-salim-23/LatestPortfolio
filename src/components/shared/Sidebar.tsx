@@ -26,7 +26,7 @@ const Sidebar = () => {
         </li>
         <li>
           <Link
-            href="/dashboard/project"
+            href="/dashboard/projects"
             className="flex flex-col md:flex-row items-center space-y-0 md:space-x-2 p-2 rounded-md hover:bg-gray-200 text-gray-700"
           >
             <FaRProject className="h-4 w-4 md:h-5 md:w-5" />
