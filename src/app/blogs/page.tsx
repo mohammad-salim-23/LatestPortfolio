@@ -26,7 +26,7 @@ const Blogs = ()=>{
         fetchBlogs();
     },[]);
     return (
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-6 mt-24 lg:mt-20">
       <h2 className="text-3xl font-bold text-center mb-6">Latest Blogs</h2>
       <div className="grid md:grid-cols-3 gap-6">
         {blogs.map((blog) => (

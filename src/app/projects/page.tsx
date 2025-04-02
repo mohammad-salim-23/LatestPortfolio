@@ -20,7 +20,7 @@ const Projects = () => {
   }, []);
   console.log(projects);
   return (
-    <div className="p-5 z-1">
+    <div className="p-5 z-1 mt-24 lg:mt-20">
       <h2 className="text-2xl font-bold text-center mb-6">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (

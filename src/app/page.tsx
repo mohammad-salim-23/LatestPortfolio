@@ -9,6 +9,7 @@ import { FaReact, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaJs, FaJava } from 
 import { SiNextdotjs, SiRedux, SiCplusplus } from "react-icons/si";
 import { useRouter } from "next/navigation";
 import Navbar from "@/components/shared/Navbar";
+import { Footer } from "@/components/shared/Footer";
 
 
 const skills = [
@@ -92,7 +93,7 @@ const HomePage = () => {
             >
               I am a MERN stack web developer.
             </motion.p>
-            
+{/*             
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -109,7 +110,35 @@ const HomePage = () => {
                   Contact
                 </button>
               </Link>
-            </motion.div>
+            </motion.div> */}
+              <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="mt-6 flex space-x-4"
+      >
+        <Link href="/Resume.pdf" download>
+          <motion.button
+            initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
+            animate={{
+              boxShadow: [
+                "0 0 20px rgba(0, 255, 255, 0.8)",
+                "0 0 30px rgba(0, 255, 255, 1)",
+                "0 0 20px rgba(0, 255, 255, 0.8)",
+              ],
+            }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            className="px-6 py-2 border border-black rounded-full hover:bg-teal-500 hover:text-black transition-all text-teal-500 animate-pulse cursor-pointer"
+          >
+            DOWNLOAD RESUME
+          </motion.button>
+        </Link>
+        <Link href="/contact">
+                <button className="px-6 py-3 border bg-white border-teal-500 text-teal-500 rounded-full hover:bg-teal-50 transition duration-200 cursor-pointer">
+                  Contact
+                </button>
+              </Link>
+      </motion.div>
           </div>
           
           <motion.div
@@ -222,7 +251,7 @@ const HomePage = () => {
           
           <div className="text-center mt-12">
             <Link href="/projects">
-              <button className="px-8 py-3 border border-teal-500 text-teal-500 rounded-full hover:bg-teal-500 hover:text-white transition duration-200">
+              <button className="px-8 py-3 border border-teal-500 text-teal-500 rounded-full hover:bg-teal-500 hover:text-white transition duration-200 cursor-pointer">
                 VIEW ALL PROJECTS
               </button>
             </Link>
@@ -232,14 +261,7 @@ const HomePage = () => {
       
       {/* CTA Section */}
       <div className="border-t border-gray-200 mt-8"></div>
-      <div className="py-20 bg-black text-white text-center">
-        <h2 className="text-3xl font-bold mb-6">Let&apos;s work together.</h2>
-        <Link href="/contact">
-          <button className="px-8 py-3 bg-white text-teal-500 rounded-full font-medium hover:bg-gray-100 transition duration-200">
-            CONTACT ME
-          </button>
-        </Link>
-      </div>
+      <Footer></Footer>
     </div>
   );
 };
