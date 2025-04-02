@@ -16,7 +16,8 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="w-[90%] mx-auto flex items-center justify-between bg-white border-b py-4 z-50">
+   <div className="fixed top-0 left-0 right-0 z-50 w-full bg-black border-b py-4 shadow-sm mb-8">
+     <div className=" mx-auto flex items-center justify-between  ">
       {/* Left Side: Logo & Mobile Menu */}
       <div className="flex items-center">
         {/* Hamburger Button */}
@@ -53,7 +54,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
 
       {/* Desktop Navigation Links */}
       <div className="hidden lg:flex">
-        <ul className="flex space-x-6 text-gray-800">
+        <ul className="flex space-x-6 text-white">
           <li className="hover:text-teal-600">
             <Link href="/">Home</Link>
           </li>
@@ -106,6 +107,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
         )}
       </div>
     </div>
+   </div>
   );
 };
 
