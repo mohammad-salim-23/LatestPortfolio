@@ -1,58 +1,60 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import { sendForm } from '@emailjs/browser';
+import Swal from 'sweetalert2';
+
 
 const ContactPage = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    success: boolean;
-    message: string;
-    isError?: boolean;
-  } | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string; isError?: boolean } | null>(null);
 
-  const onSubmit = async (data: any) => {
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-  
-    try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-  
-      const result = await response.json();
-  
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to send message');
+ // Send email function
+const form = useRef<HTMLFormElement>(null);
+
+const sendEmail = (e: any) => {
+  e.preventDefault();
+
+  sendForm(
+      "service_cu4et4g",
+      "template_lcaxfia",
+      form.current as HTMLFormElement,
+      "Lo1P_XpzWDBttraNB"
+    )
+    .then(
+      (result : any) => {
+        console.log(result.text);
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Message sent successfully!",
+            showConfirmButton: false,
+            timer: 1500
+          });
+      },
+      (error : any) => {
+        console.log(error.text);
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+          });
       }
-  
-      setSubmitStatus({ 
-        success: true, 
-        message: result.message || 'Message sent successfully!' 
-      });
-      reset();
-    } catch (error) {
-      setSubmitStatus({ 
-        success: false, 
-        message: error instanceof Error ? error.message : 'Failed to send message',
-        isError: true
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    );
+
+  e.target.reset();
+};
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 mt-24 lg:mt-20">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">CONTACT INFO</h1>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column - Contact Information */}
           <div className="space-y-8">
@@ -114,85 +116,48 @@ const ContactPage = () => {
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-6 text-gray-800">Let&#39;s work together.</h2>
             
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  {...register("name", { required: "Name is required" })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                />
-                {errors.name && <p className="mt-1 text-sm text-red-600">{String(errors.name.message)}</p>}
-              </div>
+            <form ref={form} onSubmit={sendEmail} className="space-y-4 p-6 bg-white shadow-lg rounded-lg">
+  <div className="form-control">
+    <label className="label text-gray-700 font-medium">Name</label>
+    <input
+      type="text"
+      name="user_name"
+      className="input input-bordered w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="Enter your name"
+      required
+    />
+  </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  {...register("email", { 
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid email address"
-                    }
-                  })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                />
-                {errors.email && <p className="mt-1 text-sm text-red-600">{String(errors.email.message)}</p>}
-              </div>
+  <div className="form-control">
+    <label className="label text-gray-700 font-medium">Email</label>
+    <input
+      type="email"
+      name="user_email"
+      className="input input-bordered w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="Enter your email"
+      required
+    />
+  </div>
 
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  Your Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  {...register("subject", { required: "Subject is required" })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                />
-                {errors.subject && <p className="mt-1 text-sm text-red-600">{String(errors.subject.message)}</p>}
-              </div>
+  <div className="form-control">
+    <label className="label text-gray-700 font-medium">Message</label>
+    <textarea
+      name="message"
+      className="textarea textarea-bordered w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="Write your message..."
+      rows={4}
+      required
+    />
+  </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Your Message *
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  {...register("message", { required: "Message is required" })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                ></textarea>
-                {errors.message && <p className="mt-1 text-sm text-red-600">{String(errors.message.message)}</p>}
-              </div>
+  <button
+    type="submit"
+    className="w-full bg-teal-500 hover:bg-teal-600 cursor-pointer text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300"
+  >
+    Send Message
+  </button>
+</form>
 
-              {submitStatus && (
-                <div className={`p-4 rounded-md ${
-                  submitStatus.success 
-                    ? 'bg-green-100 text-green-800' 
-                    : 'bg-red-100 text-red-800'
-                }`}>
-                  {submitStatus.message}
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full bg-teal-500 text-white py-3 px-4 rounded-md hover:bg-teal-600 transition duration-200 font-medium ${
-                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-                }`}
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-            </form>
           </div>
         </div>
       </div>

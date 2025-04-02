@@ -26,14 +26,14 @@ const Blogs = ()=>{
         fetchBlogs();
     },[]);
     return (
-        <div className="container mx-auto px-4 py-6 mt-24 lg:mt-20">
-      <h2 className="text-3xl font-bold text-center mb-6">Latest Blogs</h2>
+        <div className="container mx-auto px-4 py-6 mt-18 lg:mt-18 bg-black ">
+      <h2 className="text-3xl font-bold text-center mb-6 text-white">Latest Blogs</h2>
       <div className="grid md:grid-cols-3 gap-6">
-        {blogs.map((blog) => (
-          <div key={blog.id} className="blog-item">
+        {blogs.map((blog , index) => (
+          <div key={blog.id || index} className="blog-item">
             <Image src={blog.image} alt={blog.title} width={500} height={300} className="w-full h-48 object-cover rounded-md" />
-            <h3 className="text-xl font-semibold mt-4">{blog.title}</h3>
-            <p className="text-gray-600 mt-2">{blog.content}</p>
+            <h3 className="text-xl font-semibold mt-4 text-teal-400">{blog.title}</h3>
+            <p className="text-white mt-2">{blog.content}</p>
             <p className="text-sm text-teal-500 mt-2">{blog.category}</p>
           </div>
         ))}
