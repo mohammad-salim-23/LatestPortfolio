@@ -67,7 +67,7 @@ const ProjectPage = () => {
   };
 
   return (
-    <div className="p-5">
+    <div className="p-5 mt-24">
       <button
         onClick={() => setShowModal(true)}
         className="border border-teal-500 text-teal-500 px-5 py-2 rounded-full hover:bg-teal-500 hover:text-black transition duration-200"
