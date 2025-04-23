@@ -1,7 +1,7 @@
 "use client"
-import { signOut } from "next-auth/react";
+
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // Type Definitions
 type UserProps = {
@@ -15,19 +15,19 @@ type UserProps = {
 const Navbar = ({ session }: { session: UserProps | null }) => {
   console.log("session...",session);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- const [token , setToken] = useState<string | null>(null);
+//  const [token , setToken] = useState<string | null>(null);
 
-useEffect(()=>{
-  // This code runs only on the client side after hydration
-  setToken(localStorage.getItem("accessToken"));
-},[])
- const handleLogout = () => {
-  signOut();
-  localStorage.removeItem("accessToken");
- }
+// useEffect(()=>{
+//   // This code runs only on the client side after hydration
+//   setToken(localStorage.getItem("accessToken"));
+// },[])
+//  const handleLogout = () => {
+//   signOut();
+//   localStorage.removeItem("accessToken");
+//  }
   return (
    <div className="fixed top-0 left-0 right-0 z-50 w-full bg-black border-b py-4 shadow-sm mb-8">
-     <div className=" mx-auto flex items-center justify-between  ">
+     <div className=" mx-auto flex items-center justify-between mr-12 ">
       {/* Left Side: Logo & Mobile Menu */}
       <div className="flex items-center">
         {/* Hamburger Button */}
@@ -98,7 +98,7 @@ useEffect(()=>{
         </ul>
       )}
 
-      {/* Right Side: Login/Logout Button */}
+      {/* Right Side: Login/Logout Button
       <div className="flex items-center">
         {session?.user || token ? (
           <button
@@ -115,7 +115,7 @@ useEffect(()=>{
             Login
           </Link>
         )}
-      </div>
+      </div> */}
     </div>
    </div>
   );
