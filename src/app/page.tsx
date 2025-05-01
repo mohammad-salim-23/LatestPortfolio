@@ -96,6 +96,44 @@ const skills = [
     category: "cs-fundamentals",
   },
 ];
+const staticProjects = [
+  {
+    id: 1,
+    image: "https://i.ibb.co.com/svXX4m4M/BikeShop.png",
+    title: "Bike Shop",
+    description: "🚀 Technologies Used:\n✅ Redux – For efficient state management across …",
+    live_link: "https://bike-shop-client-six.vercel.app",
+    client_side_link: "https://github.com/mohammad-salim-23/Assignment48BikeClient",
+    server_side_link: "https://github.com/mohammad-salim-23/BikeShopServer-L2"
+  },
+  {
+    id: 2,
+    image: "https://i.ibb.co.com/zTBvXK6k/3idiots.png",
+    title: "3 Idiots Academy",
+    description: "📌 Features:\n✅ Course enrollment for students.\n✅ Instructor applica…",
+    client_side_link: "https://github.com/mohammad-salim-23/Edumanage-client-side",
+    server_side_link: "https://github.com/mohammad-salim-23/Edumanage-server-side",
+    live_link: "https://edumanage-client-side.web.app"
+  },
+  {
+    id: 3,
+    image: "https://i.ibb.co.com/KcGgFTGr/food.jpg",
+    title: "Restaurant Management",
+    description: "📌 Features:\n✅ Buyers can browse & purchase food items.\n✅ Menu mana…",
+    client_side_link: "https://github.com/mohammad-salim-23/Assignment-11-private-to-public",
+    server_side_link: "https://github.com/mohammad-salim-23/Assignment-11-private-to-public-s…",
+    live_link: "https://assignment-11-client-1d064.web.app"
+  },
+  {
+    id: 4,
+    image: "https://i.ibb.co.com/tP26TKBR/giftap1.png",
+    title: "Giftap",
+    description: "🎯 Project Overview:\nGiftap is an e-commerce platform designed to stre…",
+    client_side_link: "https://github.com/Naiemjoyi/giftap_client.git",
+    server_side_link: "https://github.com/Naiemjoyi/giftap_server.git",
+    live_link: "https://giftap901.web.app/"
+  }
+];
 
 const HomePage = () => {
   interface Project {
@@ -358,31 +396,19 @@ const HomePage = () => {
           <p className="text-center text-gray-600 mb-12">SHOWCASE</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <motion.div
-                key={project._id}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-                onClick={() => router.push(`/projects/${project._id}`)}
-              >
-                <div className="h-48 relative">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {project.description.slice(0, 100)}...
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+          {staticProjects.slice(0, 3).map((project) => (
+       <Link key="{project.id}" href={`/projects/${project.id}`}>
+          <div key={project.id} className="text-white">
+            <h3 className="text-white font-bold mb-2">{project.title}</h3>
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={300}
+              height={200}
+              className="rounded-md object-cover w-full h-48"/>
+            <p>{project.description}</p>
+          </div></Link>
+        ))}
           </div>
 
           <div className="text-center mt-12">

@@ -95,7 +95,7 @@ const Blogs = () => {
             </p>
             <div className="flex justify-between items-center mt-3">
               <span className="text-sm text-teal-500">{blog.category}</span>
-              <Link href={`/blog/${blog.id}`} className="text-sm text-teal-500 hover:text-teal-700 hover:underline">
+              <Link href={`/blogs/${blog.id}`} className="text-sm text-teal-500 hover:text-teal-700 hover:underline">
                 Read More →
               </Link>
             </div>
