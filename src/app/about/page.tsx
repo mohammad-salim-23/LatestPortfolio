@@ -1,0 +1,68 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import aboutImg from "../../../public/salim.jpg";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+export const AboutMe = () => {
+  return (
+    <div className="bg-black py-16 px-6 md:px-8" id="about">
+      <div className="container grid md:grid-cols-2 gap-6 lg:gap-10 items-start md:items-center">
+        {/* Left Side: Image */}
+        <div className="flex flex-col justify-center ml-12">
+          <div className="w-64 h-64 relative rounded-full overflow-hidden shadow-lg border-4 border-teal-500 mb-4">
+            <Image
+              src={aboutImg}
+              alt="Salim Hossain"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <Link href="/Resume.pdf" download>
+            <motion.button
+              initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
+              animate={{
+                boxShadow: [
+                  "0 0 20px rgba(0, 255, 255, 0.8)",
+                  "0 0 30px rgba(0, 255, 255, 1)",
+                  "0 0 20px rgba(0, 255, 255, 0.8)",
+                ],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+              className="px-6 py-2 border border-black rounded-full hover:bg-teal-500 hover:text-black transition-all text-teal-500 animate-pulse cursor-pointer"
+            >
+              DOWNLOAD RESUME
+            </motion.button>
+          </Link>
+        </div>
+
+        {/* Right Side: About Details */}
+        <div className="lg:mr-12">
+          <h2 className="text-3xl font-bold text-white mb-4 mt-4">About Me</h2>
+          <p className="text-gray-200 mb-4">
+            I&#39;m <span className="text-teal-400 font-semibold">Mohammad Salim</span>, a passionate web developer and a CSE student currently in my <span className="text-teal-400 font-semibold">3rd year at Metropolitan University</span>, Sylhet.
+          </p>
+          <p className="text-gray-200 mb-4">
+            I enjoy solving problems through code, especially via <span className="text-teal-400 font-semibold">competitive programming</span>. 
+            Besides tech, I love to travel and read books during my free time.
+          </p>
+          <ul className="list-disc list-inside text-gray-300 space-y-2">
+            <li><span className="font-semibold text-white">Field:</span> Web Development</li>
+            <li><span className="font-semibold text-white">Studies:</span> CSE, Metropolitan University</li>
+            <li><span className="font-semibold text-white">Hobbies:</span> Traveling, Reading Books</li>
+            <li><span className="font-semibold text-white">Skills:</span> React, Next.js, TypeScript, Tailwind CSS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+export default AboutMe;

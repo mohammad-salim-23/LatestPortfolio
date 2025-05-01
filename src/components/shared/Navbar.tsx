@@ -69,6 +69,9 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
             <Link href="/">Home</Link>
           </li>
           <li className="hover:text-teal-600">
+            <Link href="/about">About Me</Link>
+          </li>
+          <li className="hover:text-teal-600">
             <Link href="/projects">Projects</Link>
           </li>
           <li className="hover:text-teal-600">
@@ -85,6 +88,9 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
         <ul className="absolute top-16 left-4 bg-white shadow-md rounded-md w-52 p-2 lg:hidden z-10">
           <li className="py-2 px-4 hover:bg-teal-100">
             <Link href="/">Home</Link>
+          </li>
+          <li className="py-2 px-4 hover:bg-teal-100">
+            <Link href="/about">About Me</Link>
           </li>
           <li className="py-2 px-4 hover:bg-teal-100">
             <Link href="/projects">Projects</Link>
