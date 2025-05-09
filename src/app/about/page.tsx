@@ -6,9 +6,9 @@ import aboutImg from "../../../public/salim.jpg";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export const AboutMe = () => {
+const AboutPage = () => {
   return (
-    <div className="bg-black py-16 px-6 md:px-8" id="about">
+    <div className="bg-black min-h-screen py-16 px-6 md:px-8">
       <div className="container grid md:grid-cols-2 gap-6 lg:gap-10 items-start md:items-center">
         {/* Left Side: Image */}
         <div className="flex flex-col justify-center ml-12">
@@ -56,7 +56,7 @@ export const AboutMe = () => {
             <li><span className="font-semibold text-white">Field:</span> Web Development</li>
             <li><span className="font-semibold text-white">Studies:</span> CSE, Metropolitan University</li>
             <li><span className="font-semibold text-white">Hobbies:</span> Traveling, Reading Books</li>
-            <li><span className="font-semibold text-white">Skills:</span> React, Next.js, TypeScript, Tailwind CSS</li>
+            <li><span className="font-semibold text-white">Skills:</span> React, Next.js, TypeScript, Redux, MongoDB, Mongoose</li>
           </ul>
         </div>
       </div>
@@ -64,5 +64,4 @@ export const AboutMe = () => {
   );
 };
 
-
-export default AboutMe;
+export default AboutPage;

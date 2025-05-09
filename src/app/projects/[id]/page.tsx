@@ -3,81 +3,74 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-
 const staticProjects = [
   {
     id: 1,
     image: "https://i.ibb.co.com/svXX4m4M/BikeShop.png",
     title: "Bike Shop",
-    description: `📌 Technologies Used:
-✅ Redux – For efficient state management across the application.
-✅ TypeScript – Ensures type safety and improves maintainability.
-✅ Mongoose – Handles database operations seamlessly with MongoDB.
-
-📌 Key Features:
-🚴 User Authentication – Secure login and role-based access control.
-🚴 Bike Selection & Purchase – Users can browse and buy bikes effortlessly.
-🚴 Admin Panel - Admins can add, update, and delete bike listings.`,
+    description: "🚀 Technologies Used:\n✅ Redux – For efficient state management across …",
     live_link: "https://bike-shop-client-six.vercel.app",
-    client_side_link: "https://github.com/mohammad-salim-23/Edumanage-client-side",
-    server_side_link: "https://github.com/mohammad-salim-23/BikeShopServer-L2"
+    client_side_link: "https://github.com/mohammad-salim-23/Assignment48BikeClient",
+    server_side_link: "https://github.com/mohammad-salim-23/BikeShopServer-L2",
+    future_plan: `🔹 Add user reviews and real-time inventory tracking\n🔹 Implement loyalty points system for frequent buyers\n🔹 Integrate location-based delivery tracking`,
+    technologies: ["React", "Redux", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+    core_features: [
+      "User authentication and authorization",
+      "Product listing and filtering",
+      "Cart and order system",
+      "Admin dashboard with inventory control"
+    ]
   },
   {
     id: 2,
-    image: "https://i.ibb.co.com/zTBvXK6k/3idiots.png",
-    title: "3 Idiots Academy",
-    description: `📌 Features:
- ✅ Course enrollment for students.
- ✅ Instructor applications for teaching.
- ✅ Interactive learning with quizzes & live sessions.
- ✅ Stripe-powered payments for premium courses.
- 🛠 Technologies: React, Node.js, Express.js, MongoDB, JWT, Firebase, Stripe API`,
-    client_side_link: "https://github.com/mohammad-salim-23/Edumanage-client-side",
-    server_side_link: "https://github.com/mohammad-salim-23/Edumanage-server-side",
-    live_link: "https://edumanage-client-side.web.app"
+    image: "https://i.ibb.co.com/tP26TKBR/giftap1.png",
+    title: "Giftap",
+    description: "🎯 Project Overview:\nGiftap is an e-commerce platform designed to stre…",
+    client_side_link: "https://github.com/Naiemjoyi/giftap_client.git",
+    server_side_link: "https://github.com/Naiemjoyi/giftap_server.git",
+    live_link: "https://giftap901.web.app/",
+    future_plan: `🔹 Integrate AI-powered recommendation system\n🔹 Add order tracking and SMS notifications\n🔹 Include gift wrapping and personalized messages feature`,
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS", "Firebase", "Socket.io"],
+    core_features: [
+      "Real-time gift customization and delivery scheduling",
+      "User and seller dashboards",
+      "Wishlist, cart, and order tracking",
+      "Secure payment with SSLCommerz"
+    ]
   },
   {
     id: 3,
-    image: "https://i.ibb.co.com/KcGgFTGr/food.jpg",
-    title: "Restaurant Management",
-    description: `📌 Features:
- ✅ Buyers can browse & purchase food items.
- ✅ Menu management system for sellers.
- ✅ Order processing & tracking.
- 🛠 Technologies: React, Node.js, Express.js, MongoDB, JWT, Firebase`,
-    client_side_link: "https://github.com/mohammad-salim-23/Assignment-11-private-to-public",
-    server_side_link: "https://github.com/mohammad-salim-23/Assignment-11-private-to-public-server",
-    live_link: "https://assignment-11-client-1d064.web.app"
+    image: "https://i.ibb.co.com/yFXdY3NM/Nestly.png",
+    title: "BasaFinder (Smart Rental & Housing Solution)",
+    description: "📘 Overview:\nNestly is a smart rental housing platform built with Next.js + TypeScript + React.\n✅ JWT authentication\n✅ Dashboards\n✅ Listings\n✅ Stripe payment\n✅ Responsive design",
+    client_side_link: "https://github.com/ChowdhuryFatema/nestly-client",
+    server_side_link: "https://github.com/isaiful508/nestly-server",
+    live_link: "https://nextly-client.vercel.app",
+    future_plan: `🔹 Launch mobile app and add AI-based rent prediction\n🔹 Add real-time chat between tenant and landlord\n🔹 Enable virtual tour integration for listings`,
+    technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "JWT", "Stripe", "MongoDB", "Express.js"],
+    core_features: [
+      "User role-based dashboards (Admin, Tenant, Landlord)",
+      "Rental listings with filtering and map view",
+      "Secure booking with Stripe",
+      "JWT-based authentication"
+    ]
   },
   {
     id: 4,
-    image: "https://i.ibb.co.com/tP26TKBR/giftap1.png",
-    title: "Giftap",
-    description: `🎁 Project Overview:
-Giftap is an e-commerce platform designed to streamline the purchase and delivery of digital and physical gifts. Our platform enhances the gifting experience with 🎨 personalized options, 📅 scheduling capabilities, 📍 real-time tracking, and a variety of 🎟️ digital gift cards. Giftap caters to individuals and businesses seeking convenient and flexible gifting solutions.
-
-🚀 Features:
-✅ Gift Personalization 📝 – Users can add custom messages for digital gifts, and receivers will get an 📩 email with the message upon delivery.
-✅ Gift Scheduling ⏳ – Users can schedule delivery for digital gifts on special occasions and include messages.
-✅ Real-time Delivery Tracking 🚚 – Users receive a 📧 payment confirmation email with a 🆔 transaction ID to track order status in real-time and can ❌ cancel orders if logged in.
-✅ Digital Gift Cards 🎟️ – Users can purchase and instantly receive digital gift cards (e.g., Netflix, Spotify, Amazon) via email, with scheduling options available.
-✅ Multi-User System 👥 – Supports Regular Users, Sellers, and Administrators, with a 📄 seller application system.
-✅ Seller Comparison ⚖️ – Users can compare similar products from different sellers based on the current product.
-✅ Recent Views 👀 – Stores recently visited products, excluding duplicates.
-✅ Chat with Seller via Socket.io 💬 – Users can chat with sellers about products through a 💬 chat button on the product details page.
-✅ Notifications 🔔 – Users receive real-time notifications for chat initiations and other relevant updates.
-✅ Gift Subscriptions & Occasion-Based Offers 🎉 – Users can view upcoming offers on a 📅 calendar in their dashboard.
-
-🛠️ Technology Stack:
-🔹 Frontend: ⚛️ React.js
-🔹 Backend: 🚀 Node.js
-🔹 Database: 🛢️ MongoDB
-🔹 Real-time Communication: 🔄 Socket.io
-🔹 Email Service: ✉️ SendGrid or AWS SES
-🔹 Authentication: 🔐 JSON Web Tokens (JWT)`,
-    client_side_link: "https://github.com/Naiemjoy1/giftap_client/tree/main",
-    server_side_link: "https://github.com/Naiemjoyi/giftap_server.git",
-    live_link: "https://giftap901.web.app/"
+    image: "https://i.ibb.co.com/zTBvXK6k/3idiots.png",
+    title: "3 Idiots Academy",
+    description: "📌 Features:\n✅ Course enrollment\n✅ Instructor application\n✅ Dashboard",
+    client_side_link: "https://github.com/mohammad-salim-23/Edumanage-client-side",
+    server_side_link: "https://github.com/mohammad-salim-23/Edumanage-server-side",
+    live_link: "https://edumanage-client-side.web.app",
+    future_plan: `🔹 Add certificate generation and quiz system\n🔹 Include live classes with scheduling support\n🔹 Integrate student performance analytics dashboard`,
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS", "Firebase", "Stripe"],
+    core_features: [
+      "User roles: Admin, Instructor, Student",
+      "Secure login and enrollment",
+      "Course management system",
+      "Real-time feedback and Stripe payment integration"
+    ]
   }
 ];
 
@@ -97,34 +90,75 @@ const ProjectDetails = () => {
 
   if (!project) return <div className="text-center mt-10 text-red-500">Project not found</div>;
 
-  return (
-    <div className="bg-black text-white p-6 mt-15 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-center">{project.title}</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+return (
+  <div className="min-h-screen bg-black text-white p-6 py-12 flex items-center justify-center">
+    <div className="w-full max-w-5xl">
+      <h1 className="text-4xl font-bold mb-8 text-center mt-8">{project.title}</h1>
+
+      {/* Image at the top */}
+      <div className="mb-10">
         <Image
-          src={project.image}
-          alt={project.title}
-          width={800}
-          height={400}
-          className="rounded-md w-full h-auto object-cover"
-        />
-        <div>
-          <p className="whitespace-pre-line text-gray-300 mb-4">{project.description}</p>
-          <div className="flex flex-col gap-3">
-            <a href={project.live_link} target="_blank" className="text-blue-500 underline font-semibold">
+    src={project.image}
+    alt={project.title}
+    width={1200}
+    height={0}
+    className="rounded-md w-full max-h-65 object-cover shadow-xl"
+  />
+        
+      </div>
+
+      {/* Details below in column-wise layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-xl font-semibold text-pink-400 mb-2">🎯 Project Overview:</h2>
+            <p className="whitespace-pre-line text-gray-300">{project.description}</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-green-400 mb-2">📈 Future Plans:</h2>
+            <p className="whitespace-pre-line text-gray-300">{project.future_plan}</p>
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-xl font-semibold text-yellow-400 mb-2">⚙️ Core Features:</h2>
+            <ul className="list-disc pl-5 text-gray-300 space-y-1">
+              {project.core_features?.map((feature: string, index: number) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-cyan-400 mb-2">🧩 Technologies Used:</h2>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies?.map((tech: string, index: number) => (
+                <span
+                  key={index}
+                  className="bg-gray-800 text-sm px-3 py-1 rounded-full border border-gray-600"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="space-y-2 pt-4">
+            <a href={project.live_link} target="_blank" className="text-blue-400 underline font-semibold block">
               🔗 Live Preview
             </a>
-            <a href={project.client_side_link} target="_blank" className="text-teal-500 underline font-semibold">
+            <a href={project.client_side_link} target="_blank" className="text-teal-400 underline font-semibold block">
               💻 Client Code
             </a>
-            <a href={project.server_side_link} target="_blank" className="text-purple-500 underline font-semibold">
+            <a href={project.server_side_link} target="_blank" className="text-purple-400 underline font-semibold block">
               🖥️ Server Code
             </a>
           </div>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default ProjectDetails;
