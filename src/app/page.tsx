@@ -133,7 +133,7 @@ const HomePage = () => {
         >
           <Link href="/Resume.pdf" download>
             <motion.button
-              className="px-6 py-2 border border-black rounded-full hover:bg-teal-500 hover:text-black transition-all text-teal-500 animate-pulse cursor-pointer"
+              className="px-6 py-2 border border-black rounded-full bg-teal-500 hover:text-black transition-all text-white animate-pulse cursor-pointer"
               initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
               animate={{
                 boxShadow: [

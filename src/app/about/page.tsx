@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from "react";
 import Image from "next/image";
@@ -8,16 +8,31 @@ import { motion } from "framer-motion";
 
 const AboutPage = () => {
   return (
-    <div className="bg-black min-h-screen py-16 px-6 md:px-8">
-      <div className="container grid md:grid-cols-2 gap-6 lg:gap-10 items-start md:items-center">
-        {/* Left Side: Image */}
+    <div className="relative bg-black min-h-screen py-16 px-6 md:px-8">
+      {/* Background Video */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/about.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black opacity-60 z-10" />
+      </div>
+
+      <div className="relative z-20 container mx-auto grid md:grid-cols-2 gap-6 lg:gap-10 items-start md:items-center">
+        {/* Left Side */}
         <div className="flex flex-col justify-center ml-12">
           <div className="w-64 h-64 relative rounded-full overflow-hidden shadow-lg border-4 border-teal-500 mb-4">
             <Image
               src={aboutImg}
               alt="Salim Hossain"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
           <Link href="/Resume.pdf" download>
@@ -42,7 +57,7 @@ const AboutPage = () => {
           </Link>
         </div>
 
-        {/* Right Side: About Details */}
+        {/* Right Side */}
         <div className="lg:mr-12">
           <h2 className="text-3xl font-bold text-white mb-4 mt-4">About Me</h2>
           <p className="text-gray-200 mb-4">
