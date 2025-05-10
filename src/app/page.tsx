@@ -81,7 +81,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-black mt-8">
       {/* Hero Section */}
-    <div className="relative w-full h-[700px] overflow-hidden">
+    <div className="relative w-full lg:h-[500px] overflow-hidden">
   {/* Background Video */}
   <video
     autoPlay
