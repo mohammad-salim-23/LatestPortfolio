@@ -10,7 +10,7 @@ const staticProjects = [
     title: "Bike Shop",
     description: "🚀 Technologies Used:\n✅ Redux – For efficient state management across …",
     live_link: "https://bike-shop-client-six.vercel.app",
-    client_side_link: "https://github.com/mohammad-salim-23/Assignment48BikeClient",
+    client_side_link: "https://github.com/mohammad-salim-23/Assignment4BikeClient",
     server_side_link: "https://github.com/mohammad-salim-23/BikeShopServer-L2",
     future_plan: `🔹 Add user reviews and real-time inventory tracking\n🔹 Implement loyalty points system for frequent buyers\n🔹 Integrate location-based delivery tracking`,
     technologies: ["React", "Redux", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],

@@ -44,7 +44,7 @@ const staticProjects = [
     title: "Bike Shop",
     description: "🚀 Technologies Used:\n✅ Redux – For efficient state management across …",
     live_link: "https://bike-shop-client-six.vercel.app",
-    client_side_link: "https://github.com/mohammad-salim-23/Assignment48BikeClient",
+    client_side_link: "https://github.com/mohammad-salim-23/Assignment4BikeClient",
     server_side_link: "https://github.com/mohammad-salim-23/BikeShopServer-L2",
   },
   {
