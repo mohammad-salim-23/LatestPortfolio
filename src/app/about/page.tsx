@@ -18,7 +18,7 @@ const AboutPage = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/about.mp4" type="video/mp4" />
+          <source src="/about1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black opacity-60 z-10" />
