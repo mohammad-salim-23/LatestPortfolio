@@ -49,7 +49,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black py-12 px-4 sm:px-6 lg:px-8 mt-24 lg:mt-20 text-white">
+    <div className="min-h-screen bg-black py-10 px-4 sm:px-6 lg:px-8 mt-14  text-white">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-12 text-white">CONTACT INFO</h1>
 
@@ -150,7 +150,7 @@ const ContactPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300"
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 cursor-pointer"
               >
                 Send Message
               </button>

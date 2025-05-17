@@ -131,7 +131,7 @@ const HomePage = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-6 flex space-x-4"
         >
-          <Link href="/Resume.pdf" download>
+          <Link href="/updateResume.pdf" download>
             <motion.button
               className="px-6 py-2 border border-black rounded-full bg-teal-500 hover:text-black transition-all text-white animate-pulse cursor-pointer"
               initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
@@ -244,6 +244,7 @@ const HomePage = () => {
       </div>
      {/* Projects Section */}
       <div className="px-6">
+         <h2 className="text-3xl font-bold text-center text-white mb-2">My Projects</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {staticProjects.map((project) => (
       <Link key={project.id} href={`/projects/${project.id}`}>
