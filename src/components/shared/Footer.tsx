@@ -6,16 +6,7 @@ export const Footer = () => {
     <div className="relative py-20 bg-black text-white text-center">
       {/* Background Video */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/water.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        
         {/* Optional: dark overlay for better readability */}
         <div className="absolute inset-0 bg-black opacity-60 z-10" />
       </div>

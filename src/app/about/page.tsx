@@ -11,16 +11,7 @@ const AboutPage = () => {
     <div className="relative bg-black min-h-screen py-16 px-6 md:px-8">
       {/* Background Video */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/about1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        
         <div className="absolute inset-0 bg-black opacity-60 z-10" />
       </div>
 

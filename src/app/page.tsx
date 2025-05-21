@@ -83,16 +83,7 @@ const HomePage = () => {
       {/* Hero Section */}
     <div className="relative w-full lg:h-[500px] overflow-hidden">
   {/* Background Video */}
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover z-0"
-  >
-    <source src="/portfoliobg1.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+ 
 
   {/* Content Over Video */}
   <div className="container relative z-10 mx-auto px-6 py-20">
