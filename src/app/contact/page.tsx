@@ -91,7 +91,7 @@ const ContactPage = () => {
             <div className="bg-gray-900 p-8 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-6 text-white">SOCIAL INFO</h3>
               <div className="flex space-x-4">
-                <a href="https://www.facebook.com/profile.php?id=100081152050675" className="bg-gray-800 p-3 rounded-full hover:bg-teal-500 hover:text-white transition text-white">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100081152050675" className="bg-gray-800 p-3 rounded-full hover:bg-teal-500 hover:text-white transition text-white">
                   <FaFacebook className="text-xl" />
                 </a>
                 <a href="https://www.linkedin.com/in/abdullah-siddique-mohammad-salim-bb09ba264"
