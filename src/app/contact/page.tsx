@@ -62,8 +62,8 @@ const ContactPage = () => {
                   <FaEnvelope className="text-white text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">MAIL US</h3>
-                  <p className="text-gray-300">mohammadsalim017427@gmail.com</p>
+                  <h3 className="text-xl font-semibold mb-2 text-white">Drop me an email</h3>
+                  <p className="text-gray-300">mohammad.salim.tech@gmail.com</p>
                 </div>
               </div>
 
