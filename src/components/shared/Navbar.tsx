@@ -90,22 +90,23 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
       {isMenuOpen && (
   <ul className="absolute top-16 left-4 bg-white shadow-md rounded-md w-52 p-2 lg:hidden z-10">
     <Link href="/">
-      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Home</li>
+      <li  onClick={() => setIsMenuOpen(false)}
+       className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Home</li>
     </Link>
     <Link href="/about">
-      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">About Me</li>
+      <li  onClick={() => setIsMenuOpen(false)} className="py-2 px-4 hover:bg-teal-100 cursor-pointer">About Me</li>
     </Link>
     <Link href="/skills">
-      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Skills</li>
+      <li   onClick={() => setIsMenuOpen(false)} className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Skills</li>
     </Link>
     <Link href="/projects">
-      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Projects</li>
+      <li  onClick={() => setIsMenuOpen(false)} className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Projects</li>
     </Link>
     <Link href="/blogs">
-      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Blog</li>
+      <li  onClick={() => setIsMenuOpen(false)} className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Blog</li>
     </Link>
     <Link href="/contact">
-      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Contact</li>
+      <li   onClick={() => setIsMenuOpen(false)} className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Contact</li>
     </Link>
   </ul>
 )}
