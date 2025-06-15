@@ -88,27 +88,28 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <ul className="absolute top-16 left-4 bg-white shadow-md rounded-md w-52 p-2 lg:hidden z-10">
-          <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">
-            <Link href="/about">About Me</Link>
-          </li>
-           <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">
-            <Link href="/skills">Skills</Link>
-          </li>
-          <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">
-            <Link href="/blogs">Blog</Link>
-          </li>
-          <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-      )}
+  <ul className="absolute top-16 left-4 bg-white shadow-md rounded-md w-52 p-2 lg:hidden z-10">
+    <Link href="/">
+      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Home</li>
+    </Link>
+    <Link href="/about">
+      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">About Me</li>
+    </Link>
+    <Link href="/skills">
+      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Skills</li>
+    </Link>
+    <Link href="/projects">
+      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Projects</li>
+    </Link>
+    <Link href="/blogs">
+      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Blog</li>
+    </Link>
+    <Link href="/contact">
+      <li className="py-2 px-4 hover:bg-teal-100 cursor-pointer">Contact</li>
+    </Link>
+  </ul>
+)}
+
 
       {/* Right Side: Login/Logout Button
       <div className="flex items-center">

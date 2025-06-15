@@ -109,7 +109,7 @@ const ContactPage = () => {
                  <a
                             href="https://www.youtube.com/@DSAMaster-wq6lt"
                             target="_blank"
-                            className="text-white hover:text-teal-500 transition duration-200"
+                            className="bg-gray-800 p-3 rounded-full hover:bg-teal-500 hover:text-white transition text-white"
                             aria-label="Email"
                           >
                             <FaYoutube className="text-2xl" />
