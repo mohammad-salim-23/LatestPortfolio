@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useRef, useState } from 'react';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebook, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { sendForm } from '@emailjs/browser';
 import Swal from 'sweetalert2';
@@ -106,6 +106,14 @@ const ContactPage = () => {
                   className="bg-gray-800 p-3 rounded-full hover:bg-teal-500 hover:text-white transition text-white">
                   <FaGithub className="text-xl" />
                 </a>
+                 <a
+                            href="https://www.youtube.com/@DSAMaster-wq6lt"
+                            target="_blank"
+                            className="text-white hover:text-teal-500 transition duration-200"
+                            aria-label="Email"
+                          >
+                            <FaYoutube className="text-2xl" />
+                          </a>
               </div>
             </div>
           </div>

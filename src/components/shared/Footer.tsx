@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
@@ -41,11 +42,20 @@ export const Footer = () => {
             <FaLinkedin className="text-2xl" />
           </a>
           <a
-            href="mailto:your.mohammadsalim017427@gmail.com"
+            href="mailto:your.mohammad.salim.tech@gmail.com"
+             target="_blank"
             className="text-white hover:text-teal-500 transition duration-200"
             aria-label="Email"
           >
             <FaEnvelope className="text-2xl" />
+          </a>
+          <a
+            href="https://www.youtube.com/@DSAMaster-wq6lt"
+            target="_blank"
+            className="text-white hover:text-teal-500 transition duration-200"
+            aria-label="Email"
+          >
+            <FaYoutube className="text-2xl" />
           </a>
         </div>
 
