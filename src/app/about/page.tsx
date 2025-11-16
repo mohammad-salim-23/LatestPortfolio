@@ -25,26 +25,22 @@ const AboutPage = () => {
               style={{ objectFit: "cover" }}
             />
           </div>
-          <Link href="/FullStackDeveloper.Resume" target="_blank" className="mt-2">
-            <motion.button
-              initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
-              animate={{
-                boxShadow: [
-                  "0 0 20px rgba(0, 255, 255, 0.8)",
-                  "0 0 30px rgba(0, 255, 255, 1)",
-                  "0 0 20px rgba(0, 255, 255, 0.8)",
-                ],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 1.5,
-                ease: "easeInOut",
-              }}
-              className="px-6 py-2 border border-black rounded-full hover:bg-teal-500 hover:text-black transition-all text-teal-500 animate-pulse cursor-pointer"
-            >
-              DOWNLOAD RESUME
-            </motion.button>
-          </Link>
+           <Link href="/FullStackDeveloper.Resume" download>
+                  <motion.button
+                    className="px-6 py-2 border border-black rounded-full bg-teal-500 hover:text-black transition-all text-white animate-pulse cursor-pointer"
+                    initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
+                    animate={{
+                      boxShadow: [
+                        "0 0 20px rgba(0, 255, 255, 0.8)",
+                        "0 0 30px rgba(0, 255, 255, 1)",
+                        "0 0 20px rgba(0, 255, 255, 0.8)",
+                      ],
+                    }}
+                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                  >
+                    DOWNLOAD RESUME
+                  </motion.button>
+                </Link>
           
         </div>
 
