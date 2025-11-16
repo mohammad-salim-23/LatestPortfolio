@@ -25,22 +25,23 @@ const AboutPage = () => {
               style={{ objectFit: "cover" }}
             />
           </div>
-           <Link href="/FullStackDeveloper.pdf" download>
-                  <motion.button
-                    className="px-6 py-2 border border-black rounded-full bg-teal-500 hover:text-black transition-all text-white animate-pulse cursor-pointer"
-                    initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
-                    animate={{
-                      boxShadow: [
-                        "0 0 20px rgba(0, 255, 255, 0.8)",
-                        "0 0 30px rgba(0, 255, 255, 1)",
-                        "0 0 20px rgba(0, 255, 255, 0.8)",
-                      ],
-                    }}
-                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                  >
-                    DOWNLOAD RESUME
-                  </motion.button>
-                </Link>
+           <a href="/FullStackDeveloper.pdf" target="_blank" rel="noopener noreferrer">
+  <motion.button
+    className="px-6 py-2 border border-black rounded-full bg-teal-500 hover:text-black transition-all text-white animate-pulse cursor-pointer"
+    initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
+    animate={{
+      boxShadow: [
+        "0 0 20px rgba(0, 255, 255, 0.8)",
+        "0 0 30px rgba(0, 255, 255, 1)",
+        "0 0 20px rgba(0, 255, 255, 0.8)",
+      ],
+    }}
+    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+  >
+    VIEW RESUME
+  </motion.button>
+</a>
+
           
         </div>
 
