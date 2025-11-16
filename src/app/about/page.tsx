@@ -25,7 +25,7 @@ const AboutPage = () => {
               style={{ objectFit: "cover" }}
             />
           </div>
-           <Link href="/FullStackDeveloper.Resume" download>
+           <Link href="/FullStackDeveloper.pdf" download>
                   <motion.button
                     className="px-6 py-2 border border-black rounded-full bg-teal-500 hover:text-black transition-all text-white animate-pulse cursor-pointer"
                     initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
