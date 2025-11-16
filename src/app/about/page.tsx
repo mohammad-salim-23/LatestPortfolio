@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import aboutImg from "../../../public/salim.jpg";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -20,13 +19,13 @@ const AboutPage = () => {
         <div className="flex flex-col justify-center ml-12">
           <div className="w-64 h-64 relative rounded-full overflow-hidden shadow-lg border-4 border-teal-500 mb-4">
             <Image
-              src={aboutImg}
+              src="/salim.jpg"
               alt="Salim Hossain"
               fill
               style={{ objectFit: "cover" }}
             />
           </div>
-          <Link href="/Resume.pdf" download>
+          <Link href="/FullStackDeveloper.pdf" target="_blank" className="mt-2">
             <motion.button
               initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
               animate={{
@@ -46,6 +45,7 @@ const AboutPage = () => {
               DOWNLOAD RESUME
             </motion.button>
           </Link>
+          
         </div>
 
         {/* Right Side */}
