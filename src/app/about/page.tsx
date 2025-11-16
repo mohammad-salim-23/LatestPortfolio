@@ -25,7 +25,7 @@ const AboutPage = () => {
               style={{ objectFit: "cover" }}
             />
           </div>
-          <Link href="/FullStackDeveloper.pdf" target="_blank" className="mt-2">
+          <Link href="/FullStackDeveloper.Resume" target="_blank" className="mt-2">
             <motion.button
               initial={{ boxShadow: "0 0 0px rgba(255, 255, 255, 0)" }}
               animate={{
